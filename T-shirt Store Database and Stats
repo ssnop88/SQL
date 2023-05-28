@@ -1,0 +1,38 @@
+SQL description: I created a store database, then displayed the database ordered by price ascending and only shows t-shirts priced out = or > $5
+
+
+CREATE TABLE clothes (id INTEGER PRIMARY KEY, name TEXT, size TEXT, color TEXT, price INTEGER, quantity INTEGER );
+
+INSERT INTO clothes VALUES (1, "t-shirt", "small", "yellow", 5.50, 3);
+
+INSERT INTO clothes VALUES (2, "t-shirt", "small", "blue", 4.00, 8 );
+
+INSERT INTO clothes VALUES (3, "t-shirt", "small", "yellow", 8.25, 10);
+
+INSERT INTO clothes VALUES (4, "t-shirt", "medium", "yellow", 5.25, 8);
+
+INSERT INTO clothes VALUES (5, "t-shirt", "medium", "pink", 5.60, 3);
+
+INSERT INTO clothes VALUES (6, "t-shirt", "medium", "purple", 5.60, 8);
+
+INSERT INTO clothes VALUES (7, "t-shirt", "large", "pink", 5.25,3);
+
+INSERT INTO clothes VALUES (8, "t-shirt", "large", "blue", 9.00, 7);
+
+INSERT INTO clothes VALUES (9, "t-shirt", "medium", "purple", 10.00, 3);
+
+INSERT INTO clothes VALUES (10, "t-shirt", "large", "black", 4.00, 6);
+
+INSERT INTO clothes VALUES (11, "t-shirt", "large", "white", 5.25, 7);
+
+INSERT INTO clothes VALUES (12, "t-shirt", "x-large", "orange", 5.25, 1);
+
+INSERT INTO clothes VALUES (13, "t-shirt", "x-large", "green", 10.00, 9);
+
+INSERT INTO clothes VALUES (14, "t-shirt", "x-large", "pink", 4.60, 7);
+
+INSERT INTO clothes VALUES (15, "t-shirt", "x-large", "black", 5.60, 2);
+
+SELECT * FROM clothes
+WHERE price >=5.00 
+ORDER BY price asc;
